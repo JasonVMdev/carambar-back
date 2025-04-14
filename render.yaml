@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: carambar-back
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    branch: main
+    rootDir: .
+    envVars:
+      - key: PORT
+        value: 10000
